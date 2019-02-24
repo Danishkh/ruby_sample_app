@@ -18,16 +18,36 @@
   </div>
 <% else %>
 
-  <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
 
-    <h2>
-      This is the home page for the
-      <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </h2>
+  <div class="jumbotron row">
 
-    <%= link_to "Sign up here", signup_path, class: "btn btn-lg btn-primary"%>
+    <div class="col-md-8">
+      <h1>Welcome to the Sample App</h1>
+
+      <p>
+        This is my customized home page for the
+        <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+        sample application.
+      <p>
+
+      <p>
+        Source code for this application: 
+        <a href="https://github.com/Danishkh/ruby_sample_app/">
+          https://github.com/Danishkh/ruby_sample_app
+        </a>
+      </p>   
+      <br>
+      <p>
+        The application's layout is not responsive enough <i>(yet)</i> 
+        </br>to be used on mobile devices.
+      </p>
+    </div>
+    
+    <div class="vertical-center col-md-3 col-md-offset-1">
+      <%= link_to "Sign up here", signup_path, class: "btn btn-lg btn-primary"%>
+      <p><%= link_to "Already have a user? Sign in here!", login_path %></p>
+    </div>
+
   </div>
 
   <%= link_to image_tag("rails.png", alt: "Rails Logo"), 'http://rubyonrails.org/' %>
